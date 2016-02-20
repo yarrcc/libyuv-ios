@@ -1,18 +1,9 @@
-**libyuv** is an open source project that includes YUV scaling and conversion functionality.
+This fork provides simple way to build iOS version of the library.
 
-* Scale YUV to prepare content for compression, with point, bilinear or box filter.
-* Convert to YUV from webcam formats.
-* Convert from YUV to formats for rendering/effects.
-* Rotate by 90/180/270 degrees to adjust for mobile devices in portrait mode.
-* Optimized for SSE2/SSSE3/AVX2 on x86/x64.
-* Optimized for Neon on Arm.
-* Optimized for DSP R2 on Mips.
+### Building
 
-### Development
+Launch build.sh. It will output fat binary to the 'build' folder.
 
-See [Getting started] [1] for instructions on how to get started developing.
+### Prebuilt binaries
 
-You can also browse the [docs directory] [2] for more documentation.
-
-[1]: docs/getting_started.md
-[2]: docs/
+You may use prebuilt version located on [Bintray](https://bintray.com/yarr/ios/libyuv-ios).
