@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D85BA3C31DF97FDA00D4665A /* row_msa.cc in Sources */ = {isa = PBXBuildFile; fileRef = D85BA3C21DF97FDA00D4665A /* row_msa.cc */; };
+		D85BA3C51DF97FE700D4665A /* scale_msa.cc in Sources */ = {isa = PBXBuildFile; fileRef = D85BA3C41DF97FE700D4665A /* scale_msa.cc */; };
 		D8DBCA941C78956500669A0A /* compare.cc in Sources */ = {isa = PBXBuildFile; fileRef = D8DBCA691C78956500669A0A /* compare.cc */; };
 		D8DBCA951C78956500669A0A /* compare_common.cc in Sources */ = {isa = PBXBuildFile; fileRef = D8DBCA6A1C78956500669A0A /* compare_common.cc */; };
 		D8DBCA961C78956500669A0A /* compare_gcc.cc in Sources */ = {isa = PBXBuildFile; fileRef = D8DBCA6B1C78956500669A0A /* compare_gcc.cc */; };
@@ -65,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D85BA3C21DF97FDA00D4665A /* row_msa.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = row_msa.cc; sourceTree = "<group>"; };
+		D85BA3C41DF97FE700D4665A /* scale_msa.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scale_msa.cc; sourceTree = "<group>"; };
 		D8DBCA5C1C7894A300669A0A /* libyuv.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libyuv.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DBCA691C78956500669A0A /* compare.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compare.cc; sourceTree = "<group>"; };
 		D8DBCA6A1C78956500669A0A /* compare_common.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compare_common.cc; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				D8DBCA841C78956500669A0A /* row_common.cc */,
 				D8DBCA851C78956500669A0A /* row_gcc.cc */,
 				D8DBCA861C78956500669A0A /* row_mips.cc */,
+				D85BA3C21DF97FDA00D4665A /* row_msa.cc */,
 				D8DBCA871C78956500669A0A /* row_neon.cc */,
 				D8DBCA881C78956500669A0A /* row_neon64.cc */,
 				D8DBCA891C78956500669A0A /* row_win.cc */,
@@ -180,6 +185,7 @@
 				D8DBCA8D1C78956500669A0A /* scale_common.cc */,
 				D8DBCA8E1C78956500669A0A /* scale_gcc.cc */,
 				D8DBCA8F1C78956500669A0A /* scale_mips.cc */,
+				D85BA3C41DF97FE700D4665A /* scale_msa.cc */,
 				D8DBCA901C78956500669A0A /* scale_neon.cc */,
 				D8DBCA911C78956500669A0A /* scale_neon64.cc */,
 				D8DBCA921C78956500669A0A /* scale_win.cc */,
@@ -214,7 +220,7 @@
 		D8DBCA541C7894A300669A0A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Google;
 				TargetAttributes = {
 					D8DBCA5B1C7894A300669A0A = {
@@ -250,9 +256,11 @@
 				D8DBCA951C78956500669A0A /* compare_common.cc in Sources */,
 				D8DBCAB91C78956500669A0A /* scale_gcc.cc in Sources */,
 				D8DBCAA31C78956500669A0A /* mjpeg_validate.cc in Sources */,
+				D85BA3C31DF97FDA00D4665A /* row_msa.cc in Sources */,
 				D8DBCA9E1C78956500669A0A /* convert_jpeg.cc in Sources */,
 				D8DBCABC1C78956500669A0A /* scale_neon64.cc in Sources */,
 				D8DBCAB11C78956500669A0A /* row_mips.cc in Sources */,
+				D85BA3C51DF97FE700D4665A /* scale_msa.cc in Sources */,
 				D8DBCA971C78956500669A0A /* compare_neon.cc in Sources */,
 				D8DBCAAC1C78956500669A0A /* rotate_neon64.cc in Sources */,
 				D8DBCABD1C78956500669A0A /* scale_win.cc in Sources */,
@@ -306,8 +314,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -330,7 +340,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = include;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
@@ -352,8 +362,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -370,7 +382,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = include;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
