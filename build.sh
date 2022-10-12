@@ -2,4 +2,4 @@ xcodebuild -target 'yuv.xcodeproj' -scheme 'yuv' -configuration 'Release' -sdk i
 
 xcodebuild -target 'yuv.xcodeproj' -scheme 'yuv' -configuration 'Release' -sdk iphonesimulator CONFIGURATION_BUILD_DIR='build/iphonesimulator' clean build ONLY_ACTIVE_ARCH=NO PLATFORM_NAME=iphonesimulator
                      
-lipo -create build/iphoneos/libyuv.a build/iphonesimulator/libyuv.a -output build/libyuv.a
+xcodebuild -create-xcframework -library build/iphoneos/libyuv.a -headers include -library build/iphonesimulator/libyuv.a -headers include -output build/libyuv.xcframework
